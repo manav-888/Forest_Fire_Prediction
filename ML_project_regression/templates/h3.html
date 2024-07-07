@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #a2dfbc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login {
+            background: #e2eec0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login h1 {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        .login button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .login button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>FWI Prediction</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <div class="form-group">
+                <label for="Temperature">Temperature</label>
+                <input type="text" id="Temperature" name="Temperature" class="form-control" placeholder="Enter Temperature" required />
+            </div>
+            <div class="form-group">
+                <label for="RH">Relative Humidity (RH)</label>
+                <input type="text" id="RH" name="RH" class="form-control" placeholder="Enter RH" required />
+            </div>
+            <div class="form-group">
+                <label for="Ws">Wind Speed (Ws)</label>
+                <input type="text" id="Ws" name="Ws" class="form-control" placeholder="Enter Wind Speed" required />
+            </div>
+            <div class="form-group">
+                <label for="Rain">Rain</label>
+                <input type="text" id="Rain" name="Rain" class="form-control" placeholder="Enter Rain" required />
+            </div>
+            <div class="form-group">
+                <label for="FFMC">Fine Fuel Moisture Code (FFMC)</label>
+                <input type="text" id="FFMC" name="FFMC" class="form-control" placeholder="Enter FFMC" required />
+            </div>
+            <div class="form-group">
+                <label for="DMC">Duff Moisture Code (DMC)</label>
+                <input type="text" id="DMC" name="DMC" class="form-control" placeholder="Enter DMC" required />
+            </div>
+            <div class="form-group">
+                <label for="ISI">Initial Spread Index (ISI)</label>
+                <input type="text" id="ISI" name="ISI" class="form-control" placeholder="Enter ISI" required />
+            </div>
+            <div class="form-group">
+                <label for="Classes">Classes</label>
+                <input type="text" id="Classes" name="Classes" class="form-control" placeholder="Enter Classes" required />
+            </div>
+            <div class="form-group">
+                <label for="Region">Region</label>
+                <input type="text" id="Region" name="Region" class="form-control" placeholder="Enter Region" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <div class="result">
+            <h2>THE FWI prediction is {{ res }}</h2>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
