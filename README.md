@@ -1,10 +1,7 @@
-# Forest_Fire_Prediction![Uploading Screenshot 2024-07-07 at 1.49.31 PM.png…]
+# Forest_Fire_Prediction
 
 
-
-
-
-
+![Screenshot 2024-07-07 at 1 49 31 PM](https://github.com/manav-888/Forest_Fire_Prediction/assets/28830098/14c5e85f-c500-4f9d-9832-2e0c7e7877b6)
 
 
 
