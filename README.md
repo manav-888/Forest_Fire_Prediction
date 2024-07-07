@@ -1,4 +1,4 @@
-# Forest_Fire_Prediction![Uploading Screenshot 2024-07-07 at 1.49.31 PM.png…]()
+# Forest_Fire_Prediction![Uploading Screenshot 2024-07-07 at 1.49.31 PM.png…]
 
 
 
